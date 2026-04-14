@@ -1,19 +1,14 @@
 # Bikeshare project
 
-Describe what your project is about and what it does
+This project demonstrates basic techniques to analyse large amounts of data using Python and the Python packages NumPy and Pandas.
 
 ## Information about how to use this project
 
-This could include:
-
-- Step-by-step instructions for installing or setting up your project.
-- Any software dependencies that need to be installed.
-- Instructions and examples for how to use your project, including any helpful code snippets.
-- Common issues and troubleshooting tips
+After cloning of this project, open up the Python-file (*.py) in VSCode and execute it.
 
 ## Contribution guidelines
 
-If you welcome contributions, provide guidelines on how others can contribute to your project.
+This project was created for learning purposes and therefore does not require any contribution.
 
 ## Date created
 
