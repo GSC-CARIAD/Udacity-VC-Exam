@@ -1,6 +1,7 @@
 # Bikeshare project
 
 This project demonstrates basic techniques to analyse large amounts of data using Python and the Python packages NumPy and Pandas.
+It has been created solely for the purpose to demonstrate capabilities in using Git.
 
 ## Information about how to use this project
 
