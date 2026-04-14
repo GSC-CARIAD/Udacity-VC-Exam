@@ -15,15 +15,48 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print('> Enter the data you are interested in:')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-
+    while True:
+        try:
+            city = input("Please enter the city (one of: Chicago, New York City, Washington): ")
+            city = city.lower()
+            # city = CITY_DATA.get(city_str)
+            if city not in CITY_DATA:
+                print("City '{}' is unknown! Allowed are: {}".format(city, list(CITY_DATA.keys()) ))
+            else:
+                break
+        except KeyboardInterrupt:
+            return
 
     # get user input for month (all, january, february, ... , june)
-
+    while True:
+        try:
+            prompt = "Please enter the month (either 'all' or 'January' .. 'June'): "
+            month = input(prompt)
+            month = month.lower()
+            if (month in months) or (month.lower() == 'all'):
+                break
+            else:
+                print("Month '{}' is invalid! Allowed are: 'all' or {}".format(month, months))
+        except KeyboardInterrupt:
+            return
+        except Exception as e:
+            print(e)
+            print("Month '{}' is unknown! Allowed are: {}".format(month, months ))
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-
+    while True:
+        try:
+            weekday_str = input("Please enter the day of the week (either 'all' or 'Monday' ... 'Sunday'): ")
+            weekday_str = weekday_str.title()
+            if (weekday_str not in days_of_week) and (weekday_str.lower() != 'all'):
+                print("Weekday '{}' is invalid! Allowed are: 'all' or {}".format(weekday_str, days_of_week))
+            else:
+                day = weekday_str
+                break
+        except KeyboardInterrupt:
+            return
 
     print('-'*40)
     return city, month, day
